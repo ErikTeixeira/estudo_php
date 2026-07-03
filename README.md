@@ -1,5 +1,7 @@
 # Estudo PHP e Laravel
 
-
-
-#F032 34-02 - Funções para strings
+### Rodar o index.php
+- Vá até a pasta onde está o arquivo
+    - cd "C:\Users\erikt\Downloads\estudo_advpl_protheus\estudo_php\php\annots\html_php"
+- Execute o servidor
+    - ``php -S localhost:8000``

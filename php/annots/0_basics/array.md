@@ -19,3 +19,6 @@ $x = [
 
 echo $x[2]  // teste
 ```
+
+- aparece o array inteiro - ``print_r($array)``
+

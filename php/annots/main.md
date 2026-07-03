@@ -1,7 +1,55 @@
 # PHP
 
+- Curso - www.udemy.com/course/php-do-absoluto-zero-ao-avancado-laravel-11
+
 ## PHP - Hypertext Preprocessor
 
+---
+- [PHP](#php)
+  - [PHP - Hypertext Preprocessor](#php---hypertext-preprocessor)
+    - [Executando o servidor local](#executando-o-servidor-local)
+    - [Funções Matemáticas e Conversões](#funções-matemáticas-e-conversões)
+      - `abs()`
+      - `explode()`
+      - Conversão para `int`
+      - `max()`
+      - `ceil()`
+      - `is_float()`
+      - `round()`
+      - `floor()`
+      - `is_numeric()`
+      - `is_string()`
+    - [Strings](#strings)
+      - `str_split()`
+      - `substr()`
+      - `strlen()`
+      - `str_replace()`
+      - `preg_replace()`
+      - Conversão de número para string
+    - [Arrays](#arrays)
+      - Criando arrays
+      - `count()`
+      - `array_splice()`
+      - Primeiro e último elemento
+      - `array_shift()`
+      - `array_map()`
+      - `isset()` e `array_key_exists()`
+      - `array_reverse()`
+      - `unset()` + `array_values()`
+    - [Arrays Associativos](#arrays-associativos)
+      - Estrutura
+      - Percorrendo com `for...in`
+      - Acessando valores
+    - [Saída no Console](#saída-no-console)
+    - [Estruturas Condicionais](#estruturas-condicionais)
+      - `if`
+      - `elseif`
+      - `else`
+    - [Estruturas de Repetição](#estruturas-de-repetição)
+      - `for`
+      - `foreach`
+      - `while`
+---
 
 - Powershell
     - cd "C:\Users\erikt\Downloads\estudo_advpl_protheus\estudo_php\php\"
