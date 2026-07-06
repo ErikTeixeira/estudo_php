@@ -83,3 +83,32 @@ $hello = "Olá mundo";
 ```
 
 ---
+
+## 04 - função no html
+
+- **Usar aspas duplas para dizer que é uma explressão html, e dentro dela usar aspas simples para quando ser algo do php**
+
+```php
+<?php 
+Function frutas() {
+    $arrFrut = ["banana", "laranja", "maca"];
+
+    foreach ( $arrFrut as $key => $value) {
+        echo "<option value='$key'>$value</option>";
+    }
+}
+?>
+
+<body>
+
+    <form action="">
+        <select name="" id="">
+            <?php frutas(); ?>
+        </select>
+    </form>
+
+</body>
+```
+
+---
+

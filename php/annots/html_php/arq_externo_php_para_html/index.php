@@ -1,13 +1,9 @@
-<?php 
 
-Function frutas() {
-    $arrFrut = ["banana", "laranja", "maca"];
+<?php include "functions.php"; ?>
+<?php require "functions.php"; ?>
+<?php require_once "functions.php"; ?>
 
-    foreach ( $arrFrut as $key => $value) {
-        echo "<option value='$key'>$value</option>";
-    }
-}
-?>
+<!-- tem estas 3 formas -->
 
 <!DOCTYPE html>
 <html lang="en">
