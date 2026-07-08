@@ -1,5 +1,13 @@
 <?php
 
+
+$name = isset( $_POST['name'] ) ? $_POST['name'] : '' ;
+$age = isset ($_POST['age']) ? $_POST['age'] : '';
+
+if ( $name != '' && $age != '' ) {
+    insertClient($name, $age);
+}
+
 function connect()
 {
     try {
@@ -28,3 +36,26 @@ function selectClientts() {
     return $result;
 }
 
+
+function selectProducts() {
+    $db = connect();
+
+    $query = $db->prepare("SELECT * FROM produtos");
+    $query->execute();
+
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    return $result;
+}
+
+
+function insertClient($name, $age) {
+    $db = connect();
+
+    $query = $db->prepare("INSERT INTO clientes (name, age) VALUES ('".$name."', $age)");
+
+    $query->execute();
+}
+
+
+29:50
