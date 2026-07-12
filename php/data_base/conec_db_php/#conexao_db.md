@@ -331,4 +331,7 @@ echo ...                          // Mostra na tela
 - `return` → devolve os dados para outra função ou arquivo.
 - `include` → permite usar funções de outro arquivo.
 - `foreach` → percorre todos os registros retornados.
-- `echo` → mostra o resultado no HTML.
+- `echo` → mostra o resultado no HTML
+
+
+.

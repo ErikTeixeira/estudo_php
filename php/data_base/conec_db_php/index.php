@@ -1,5 +1,6 @@
 <?php
-    include "function.php"
+    include_once "clientes.php";
+    include_once "products.php";
 ?>
 
 <!DOCTYPE html>
@@ -8,11 +9,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conectando com o banco</title>
+
+    <link rel="stylesheet" href="../style/style.css">
+
 </head>
 <body>
 
     <div>
-        <form action="function.php" method="post">
+        <form action="clientes.php" method="post">
             <label for="name">Nome:</label>
             <input id="name" name="name" type="text" placeholder="Nome do Cliente">
             </br>
@@ -23,13 +27,26 @@
         </form>
     </div>
 
-    <div>
-        <h2>Clientes</h2>
-        <?php foreach (selectClientts() as $clients ) : ?>
-            <p id="<?php echo $clients["id"] ?>" > <?php echo $clients["name"] . " - " . $clients["age"] . " anos" ?> </p>
-            </br>
-        <?php endforeach; ?>
-    </div>
+
+    <table cellspacing="1" cellpadding="7" style="width: 100%; margin-top: 20px" >
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach (selectClients() as $clients ) : ?>
+                <tr>
+                    <td> <?php echo $clients["id"] ?> </td>
+                    <td> <?php echo $clients["name"] ?> </td>
+                    <td> <?php echo $clients["age"] ?> </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    
 
     <div>
         <h2>Produtos</h2>
@@ -42,3 +59,6 @@
 
 </body>
 </html>
+
+
+17:23
