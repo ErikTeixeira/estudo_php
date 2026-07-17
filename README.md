@@ -11,3 +11,15 @@
 ### Form | Input
 
 - **Precisa ter o 'name' em cada input para o form passar os dados corretamente**
+
+---
+
+### var_dump
+
+- **Importante para debugar**, como o tipo de requisição e para testar as querys
+```php
+var_dump($_GET);
+var_dump($_POST);
+
+var_dump($query);  // e da para pegar a query que foi gerada e testar no banco de dados
+```

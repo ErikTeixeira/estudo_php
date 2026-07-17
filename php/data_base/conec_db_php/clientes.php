@@ -4,6 +4,7 @@ include_once "connect_db.php";
 
 
 $id = isset( $_POST['id'] ) ? $_POST['id'] : '' ;
+$idDel = isset( $_GET['idDel'] ) ? $_GET['idDel'] : '' ;
 $name = isset( $_POST['name'] ) ? $_POST['name'] : '' ;
 $age = isset ($_POST['age']) ? $_POST['age'] : '';
 
@@ -11,6 +12,8 @@ if ( $name != '' && $age != '' && $id == '' ) {
     insertClient($name, $age);
 } elseif ( $name != '' && $age != '' && $id != '' ) {
     updateClient($id, $name, $age);
+} elseif ( $idDel != '' ) {
+    deleteClient($idDel);
 }
 
 
@@ -45,7 +48,7 @@ function insertClient($name, $age) {
 
     $query->execute();
 
-    header("Location: index.php");
+    header("Location: ../?p=clients");
     exit;
 }
 
@@ -57,6 +60,17 @@ function updateClient($id, $name, $age) {
 
     $query->execute();
 
-    header("Location: ../index.php");
+    header("Location: ../?p=clients");
+    exit;
+}
+
+function deleteClient($id) {
+    $db = connect();
+
+    $query = $db->prepare("DELETE FROM clientes WHERE id = $id");
+
+    $query->execute();
+
+    header("Location: ../?p=clients");
     exit;
 }

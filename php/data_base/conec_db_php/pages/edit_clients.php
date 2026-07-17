@@ -1,5 +1,5 @@
 <?php
-    include_once "../clientes.php";
+    include_once __DIR__ . "/../clientes.php";
 
     $id = $_GET['id'];
 
