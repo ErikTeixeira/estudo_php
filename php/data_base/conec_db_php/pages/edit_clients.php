@@ -24,7 +24,7 @@
         <label for="age">Idade</label>
         <input id="age" name="age" type="number" placeholder="Idade do Cliente" value="<?php echo $client["age"] ?>" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);" >
 
-        <input type="submit" value="Enviar">
+        <input class="btn btn-primary mb-5" type="submit" value="Enviar">
     </form>
     
 </body>

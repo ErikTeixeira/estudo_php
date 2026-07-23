@@ -74,3 +74,37 @@
             <?php endforeach; ?>
         </ul>
     </div>
+
+
+    <div id="delete" hidden>
+        <div class="delete-modal">
+            <h3>Tem certeza?</h3>
+
+            <p>Tem certeza que deseja deletar este cliente?</p>
+
+            <div class="buttons">
+                <button onclick="confirmDelete()">Sim</button>
+                <button onclick="closeDel()">Não</button>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    let clientId = null;
+
+    function openDel(id) {
+        clientId = id;
+        const divDel = document.getElementById('delete');
+
+        divDel.removeAttribute('hidden');
+    }
+
+    function closeDel() {
+        document.getElementById('delete').setAttribute('hidden', '');
+    }
+
+    function confirmDelete() {
+        window.location.href = 'clientes.php?idDel=' + clientId;
+    }
+</script>

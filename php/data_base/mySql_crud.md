@@ -18,6 +18,8 @@
 ### CREATE
 
 ```sql
+USE teste;
+
 CREATE TABLE fornecedores(
     codigo int(6) AUTO_INCREMENT,
     nome varchar(100) NOT NULL,

@@ -61,8 +61,8 @@
             Configurações
         </div>
 
-        <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+        <li class="nav-item <?php /** @disregard */ echo ($page == 'users') ? 'active' : ''; ?>">
+            <a class="nav-link" href="?p=users">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Usuários</span></a>
         </li>
