@@ -173,7 +173,9 @@
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                            <?php echo $_SESSION['user']["name"]; ?>
+                        </span>
                         <img class="img-profile rounded-circle"
                             src="../img/undraw_profile.svg">
                     </a>
@@ -193,7 +195,7 @@
                             Activity Log
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <a class="dropdown-item" href="logout.php">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                             Logout
                         </a>
@@ -203,4 +205,51 @@
             </ul>
 
         </nav>
+        
         <!-- End of Topbar -->
+
+        <style>
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 100%;
+            }
+            .dropdown-menu.show {
+                display: block;
+            }
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            // Pega todos os toggles de dropdown
+            var toggles = document.querySelectorAll('[data-toggle="dropdown"]');
+
+            toggles.forEach(function (toggle) {
+                toggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                var menu = this.nextElementSibling; // pega o .dropdown-menu logo depois do link
+                var isOpen = menu.classList.contains('show');
+
+                // Fecha todos os outros dropdowns abertos
+                document.querySelectorAll('.dropdown-menu.show').forEach(function (openMenu) {
+                    openMenu.classList.remove('show');
+                });
+
+                // Abre o clicado (se não estava aberto)
+                if (!isOpen) {
+                    menu.classList.add('show');
+                }
+                });
+            });
+
+            // Fecha o dropdown se clicar fora
+            document.addEventListener('click', function () {
+                document.querySelectorAll('.dropdown-menu.show').forEach(function (openMenu) {
+                openMenu.classList.remove('show');
+                });
+            });
+            });
+        </script>

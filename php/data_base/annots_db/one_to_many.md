@@ -70,3 +70,38 @@ ON u.role_id = r.id;
 - **Não** utilize `UNIQUE` na Foreign Key.
 - Um registro da tabela `roles` pode estar relacionado com vários registros da tabela `users`.
 - Use `JOIN` para consultar dados das duas tabelas.
+
+
+---
+
+
+## Como Funciona o JOIN em Many To Many (N:N)
+
+Em um relacionamento **Many To Many**, o `JOIN` precisa passar pela **tabela intermediária**, pois é ela que conecta as duas tabelas principais.
+
+Exemplo:
+
+```text
+students ← student_course → courses
+```
+
+Consulta:
+
+```sql
+SELECT s.name, c.course_name
+FROM students s
+JOIN student_course sc
+    ON s.id = sc.student_id
+JOIN courses c
+    ON sc.course_id = c.id;
+```
+
+### Passo a passo
+
+1. Começa pela tabela `students`.
+2. Faz um `JOIN` com `student_course` usando `students.id = student_course.student_id`.
+3. Em seguida, faz outro `JOIN` com `courses` usando `student_course.course_id = courses.id`.
+4. O resultado une o aluno ao curso correspondente.
+
+> Em relacionamentos **Many To Many**, normalmente são necessários **dois JOINs**, pois a ligação entre as tabelas acontece através da tabela intermediária.
+
