@@ -1,5 +1,6 @@
 <?php 
     include_once __DIR__ . "/../users.php";
+    include_once __DIR__ . "/../role.php";
 ?>
 
 
@@ -14,6 +15,13 @@
 
             <label for="emial">E-mail: </label>
             <input class="form-control mb-2" id="email" name="email" type="email" placeholder="Email do Cliente" >
+
+            <label for="role_id">Permissão:</label>
+            <select name="role_id" id="role_id" class="form-control mb-2">
+                <?php foreach( selectRoles() as $role ): ?>
+                    <option value=" <?php echo $role["id_role"] ?> " > <?php echo $role["role_name"] ?> </option>
+                <?php endforeach; ?>
+            </select>
 
             <label for="password">Senha:</label>
             <input class="form-control mb-2" id="password" name="password" type="password" placeholder="Password do Cliente" >
@@ -35,6 +43,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
+                            <th>Permissão</th>
                             <th>E-mail</th>
                             <th>Ações</th>
                         </tr>
@@ -43,6 +52,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
+                            <th>Permissão</th>
                             <th>E-mail</th>
                             <th>Ações</th>
                         </tr>
@@ -52,6 +62,7 @@
                             <tr>
                                 <td> <?php echo $users["id"] ?> </td>
                                 <td> <?php echo $users["name"] ?> </td>
+                                <td> <?php echo $users["role_name"] ?> </td>
                                 <td> <?php echo $users["email"] ?> </td>
                                 <td>
                                     <a href="/?p=edit_users&id=<?=$users["id"]?>">Editar</a>
