@@ -11,6 +11,8 @@
 #### Projeto clientes
 - cd "C:\Users\erikt\Downloads\estudo_advpl_protheus\estudo_php\php\data_base\conec_db_php"      
 
+#### Projeto Laravel
+- cd "C:\Users\erikt\Downloads\estudo_advpl_protheus\estudo_php\php\laravel\projeto-laravel\example-app"  
 
 ---
 
@@ -31,4 +33,9 @@ var_dump($query);  // e da para pegar a query que foi gerada e testar no banco d
 ```
 
 ---
+
+### Laravel
+
+- Instalar o laravel
+    - ``composer global require laravel/installer``
 
