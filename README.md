@@ -39,3 +39,14 @@ var_dump($query);  // e da para pegar a query que foi gerada e testar no banco d
 - Instalar o laravel
     - ``composer global require laravel/installer``
 
+- Comandos para iniciar o projeto
+    **Tem que rodar os dois ao mesmo tempo, em CMDs diferentes**
+    - ``php artisan serve``
+    - ``npm run dev``
+
+- Comandos para 
+    - ``php artisan config:clear`` – Limpa o cache das configurações para que alterações nos arquivos de configuração sejam aplicadas.
+    - ``php artisan optimize`` – Gera caches (config, rotas, eventos e views) para melhorar o desempenho da aplicação.
+    - ``php artisan migrate`` – Executa as migrações do banco de dados, criando ou atualizando tabelas conforme os arquivos de migration.
+
+---
