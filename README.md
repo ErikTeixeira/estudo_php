@@ -29,3 +29,6 @@ var_dump($_POST);
 
 var_dump($query);  // e da para pegar a query que foi gerada e testar no banco de dados
 ```
+
+---
+
