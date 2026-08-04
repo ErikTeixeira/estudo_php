@@ -57,4 +57,7 @@ var_dump($query);  // e da para pegar a query que foi gerada e testar no banco d
     - #### @csrf
         -  cria um campo de formulário oculto com um token de segurança contra ataques do tipo Cross-Site
 
+- Colocar as rotas dentro de um **middleware** para que não sejam acessadas sem login
+    - ``Route::middleware('auth')->group(function () {``
+
 ---
