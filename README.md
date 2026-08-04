@@ -49,6 +49,10 @@ var_dump($query);  // e da para pegar a query que foi gerada e testar no banco d
     - ``php artisan optimize`` – Gera caches (config, rotas, eventos e views) para melhorar o desempenho da aplicação.
     - ``php artisan migrate`` – Executa as migrações do banco de dados, criando ou atualizando tabelas conforme os arquivos de migration.
 
+- Utilizar o login do laravel
+    - ``composer require laravel/ui``
+    - ``php artisan ui:auth``
+
 - Todos os formularios tem que ter isso
     - #### @csrf
         -  cria um campo de formulário oculto com um token de segurança contra ataques do tipo Cross-Site

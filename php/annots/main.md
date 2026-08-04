@@ -1,107 +1,50 @@
-# PHP
-
-- Curso - www.udemy.com/course/php-do-absoluto-zero-ao-avancado-laravel-11
-
-## PHP - Hypertext Preprocessor
-
----
-- [PHP](#php)
-  - [PHP - Hypertext Preprocessor](#php---hypertext-preprocessor)
-    - [Executando o servidor local](#executando-o-servidor-local)
-    - [Funções Matemáticas e Conversões](#funções-matemáticas-e-conversões)
-      - `abs()`
-      - `explode()`
-      - Conversão para `int`
-      - `max()`
-      - `ceil()`
-      - `is_float()`
-      - `round()`
-      - `floor()`
-      - `is_numeric()`
-      - `is_string()`
-    - [Strings](#strings)
-      - `str_split()`
-      - `substr()`
-      - `strlen()`
-      - `str_replace()`
-      - `preg_replace()`
-      - Conversão de número para string
-    - [Arrays](#arrays)
-      - Criando arrays
-      - `count()`
-      - `array_splice()`
-      - Primeiro e último elemento
-      - `array_shift()`
-      - `array_map()`
-      - `isset()` e `array_key_exists()`
-      - `array_reverse()`
-      - `unset()` + `array_values()`
-    - [Arrays Associativos](#arrays-associativos)
-      - Estrutura
-      - Percorrendo com `for...in`
-      - Acessando valores
-    - [Saída no Console](#saída-no-console)
-    - [Estruturas Condicionais](#estruturas-condicionais)
-      - `if`
-      - `elseif`
-      - `else`
-    - [Estruturas de Repetição](#estruturas-de-repetição)
-      - `for`
-      - `foreach`
-      - `while`
----
-
-- Powershell
-    - cd "C:\Users\erikt\Downloads\estudo_advpl_protheus\estudo_php\php\"
-    - php -S localhost:8000
-
----
+php
 
 
 
-   -    deixar positivo
-	        abs($valorNegativo);
+deixar positivo
+	abs($valorNegativo);
 
-   -    separar valores e ja colocar em uma variável
-	        [$ladoA, $ladoB] = explode(":", $string);
+separar valores e ja colocar em uma variável
+	[$ladoA, $ladoB] = explode(":", $string);
 
-   -    converter string para int
-	        $numero = (int)$string;
+converter string para int
+	$numero = (int)$string;
 
-   -    max()
-	        encontrar e retornar o maior valor numérico em uma lista de argumentos ou dentro de um array
-	        $maior = max(10, 50, 42, 18);
-	        echo $maior; // Saída: 50
-
-
-   -    ceil()
-	        arrendonda para cima
-	        $numero = 4.2;
-	        $resultado = ceil($numero); // Retorna 5
+max()
+	encontrar e retornar o maior valor numérico em uma lista de argumentos ou dentro de um array
+	$maior = max(10, 50, 42, 18);
+	echo $maior; // Saída: 50
 
 
-   -    is_float()
-	        is_float() - verifica se é um número decimal
+ceil()
+	arrendonda para cima
+	$numero = 4.2;
+	$resultado = ceil($numero); // Retorna 5
 
 
-   -    round()
-	        round($numero, 2); - arredonda para 2 casas decimais
+is_float()
+	is_float() - verifica se é um número decimal
 
 
-   -    floor()
-	        floor($num);   - arredondar para baixo
+round()
+	round($numero, 2); - arredonda para 2 casas decimais
 
 
-   -    s_numeric()
-	        is_numeric($nume)   - verifica se e numero
+floor()
+	floor($num);   - arredondar para baixo
 
-   -    is_string()
-	        is_string($word)   - verifica se é string
+
+is_numeric()
+	is_numeric($nume)   - verifica se e numero
+
+is_string()
+	is_string($word)   - verifica se é string
 
 
 **********************************************
 
-### String
+string
 
 str_split()
 	$texto = "PHP";
@@ -136,9 +79,14 @@ str_split()
 	 $novo_texto = str_replace(" ", "", $texto);  - tirar espaço
 
 
+   -    explode($delimitador, $string)
+		$frutaString = "maçã banana laranja";
+		$frutaArray = explode(" ", $frutaString);
+
+
 **********************************************
 
-### Array
+array
 
 	$dados = [];
 
@@ -186,7 +134,7 @@ str_split()
 
 **********************************************
 
-### Array Associativo
+Array Associativo
 
 	const usuario = {
     		nome: "Ana",
@@ -201,7 +149,17 @@ str_split()
 
 
 		acessar o primeiro no nome
-   -    $usuario[0]["nome"];	
+   -    $usuario[0]["nome"];
+
+
+	$usuario = [
+    		"nome" => "Ana",
+    		"idade" => 28,
+    		"ativo" => true
+	];
+
+	// Acessando um valor específico
+	echo $usuario["nome"];	
 
 **********************************************
 
@@ -209,8 +167,7 @@ console log  --  echo "Hello World!\n";
 
 **********************************************
 
-### If
-
+if
 	if (condition) {
 
 	} elseif (another_condition) {
@@ -221,8 +178,7 @@ console log  --  echo "Hello World!\n";
 
 **********************************************
 
-### For
-
+for
 	for ($i = 1; $i <= 5; $i++) {
     		echo "The number is: $i <br>";
 	}
@@ -233,8 +189,7 @@ console log  --  echo "Hello World!\n";
 
 **********************************************
 
-### While
-
+while
 	$i = 1;
 	while ($i <= 5) {
     		echo "The number is: $i <br>";

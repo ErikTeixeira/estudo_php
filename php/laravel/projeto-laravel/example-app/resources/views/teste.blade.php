@@ -48,6 +48,11 @@
 <body>
     <h1>Teste</h1>
 
+    <form action="{{ route('logout') }}" method="POST" class="d-inline m-2">
+        @csrf
+        <button type="submit">Deslogar</button>
+    </form>
+
     <form action=" {{ route('teste.store') }} " method="post">
         @csrf
         <input type="text" name="name" placeholder="Digite seu nome">
@@ -71,7 +76,7 @@
                     <td> {{ $teste->name ?? "Sem nome" }} </td>
                     <td> {{ $teste->email ?? "Sem email" }} </td>
                     <td>
-                        <a href=" {{ route('teste.show', $teste->id) }} " target="_blank" >Editar</a>
+                        <a href=" {{ route('teste.show', $teste->id) }} " >Editar</a>
                         <a href="#" onclick="confirmDelete()" target="_self">Excluir</a>
                     </td>
                 </tr>

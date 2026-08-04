@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Teste;
+use Illuminate\Support\Facades\Auth;
 
 
 class TesteController extends Controller
@@ -43,8 +44,12 @@ class TesteController extends Controller
             return redirect()->route('teste.index');
         }
         $id = $request->id;
+            // traz um array de dados com o ->all()
         $data = $request->all();
         $teste = Teste::find($id);
+
+        // da para fazer assim
+        /* $update = $teste->update($data); */
 
         if (!$teste) {
             return redirect()->route('teste.index');
@@ -61,8 +66,18 @@ class TesteController extends Controller
     public function destroy($id)
     {
         $teste = Teste::find($id);
+        // assim tmb funciona  --  $destroy = $teste-:>destroy($id);
         $teste->delete();
         return redirect()->route('teste.index');
     }
 
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('home');
+    }
 }
