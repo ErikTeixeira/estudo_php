@@ -8,11 +8,14 @@
 - Execute o servidor
     - ``php -S localhost:8000``
 
-#### Projeto clientes
+#### Projeto clientes PHP
 - cd "C:\Users\erikt\Downloads\estudo_advpl_protheus\estudo_php\php\data_base\conec_db_php"      
 
-#### Projeto Laravel
+#### Projeto PHP + Laravel
 - cd "C:\Users\erikt\Downloads\estudo_advpl_protheus\estudo_php\php\laravel\projeto-laravel\example-app"  
+
+#### Projeto laravel 
+- cd D:\estudo_focado\estudo_php\laravel\projetos\laravel_estudo
 
 ---
 
@@ -38,6 +41,9 @@ var_dump($query);  // e da para pegar a query que foi gerada e testar no banco d
 
 - Instalar o laravel
     - ``composer global require laravel/installer``
+
+- Criar um projeto
+    - ``composer create-project laravel/laravel laravel_estudo``
 
 - Comandos para iniciar o projeto
     **Tem que rodar os dois ao mesmo tempo, em CMDs diferentes**
