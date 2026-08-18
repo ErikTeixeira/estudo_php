@@ -44,6 +44,8 @@ var_dump($query);  // e da para pegar a query que foi gerada e testar no banco d
 
 - Criar um projeto
     - ``composer create-project laravel/laravel laravel_estudo``
+    - ``npm install``
+    - ``composer install``
 
 - Comandos para iniciar o projeto
     **Tem que rodar os dois ao mesmo tempo, em CMDs diferentes**
