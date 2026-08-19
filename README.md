@@ -19,6 +19,11 @@
 
 ---
 
+### Anotação mais importante
+- [Métodos php](php/annots/main.md)  
+
+---
+
 ### Form | Input
 
 - **Precisa ter o 'name' em cada input para o form passar os dados corretamente**
@@ -42,10 +47,25 @@ var_dump($query);  // e da para pegar a query que foi gerada e testar no banco d
 - Instalar o laravel
     - ``composer global require laravel/installer``
 
-- Criar um projeto
+- **Criar um projeto**
     - ``composer create-project laravel/laravel laravel_estudo``
     - ``npm install``
+    - ``php artisan key:generate``
+    - para o bootstrap - ``npm i --save bootstrap @popperjs/core`` - ``npm i --save-dev sass``
     - ``composer install``
+    - Configurar o banco de dados
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3316
+    DB_DATABASE=db_dashboard
+    DB_USERNAME=root
+    DB_PASSWORD=Senha@2
+    ```
+    - ``php artisan migrate``
+
+    - [Configuração inicial de um projeto](laravel/annots/config_ini.md) 
+    
 
 - Comandos para iniciar o projeto
     **Tem que rodar os dois ao mesmo tempo, em CMDs diferentes**

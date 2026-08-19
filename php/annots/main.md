@@ -9,7 +9,7 @@ separar valores e ja colocar em uma variável
 	[$ladoA, $ladoB] = explode(":", $string);
 
 converter string para int
-	$numero = (int)$string;
+	$numero = (int) $string;
 
 max()
 	encontrar e retornar o maior valor numérico em uma lista de argumentos ou dentro de um array
@@ -79,9 +79,40 @@ str_split()
 	 $novo_texto = str_replace(" ", "", $texto);  - tirar espaço
 
 
+   -    Dividir uma string em pedaços menores
    -    explode($delimitador, $string)
 		$frutaString = "maçã banana laranja";
 		$frutaArray = explode(" ", $frutaString);
+
+
+    -    strrev - frase de trás para frente 
+		$frase = "Olá mundo!";
+		$invertida = strrev($frase);
+
+
+    -    Converter para maiúsculas e minúsculas
+		strtoupper()
+		strtolower()
+
+
+    -    Repetir um texto (string) um número específico de vezes
+		str_repeat(string, times);
+		echo str_repeat("-", 5);
+		// Saída: -----
+
+
+   -    preg_match_all($padrao, $texto, $resultados);
+		encontrar todas as ocorrências de uma expressão regular (regex) em uma strin
+
+		return preg_match_all('/[aeiou]/i', $str);
+
+
+   -    substr_count
+		contar quantas vezes uma palavra ou caractere (substring) aparece
+
+		$texto = "Aprender PHP é bom. PHP é legal.";
+		$quantidade = substr_count($texto, "PHP");
+		echo $quantidade; // Exibe 2
 
 
 **********************************************
@@ -130,6 +161,53 @@ array
 
             Reorganiza os índices sequencialmente
 	$array = array_values($array);
+
+
+   -    Junta os valores usando uma vírgula e um espaço
+	$resultado = implode(', ', $frutas);
+
+
+   -    Ordem Crescente 
+	- não coloca em uma variável, porque ele retorna true ou false
+		$numeros = [4, 2, 8, 6];
+		sort($numeros);
+
+   -    Ordem Decrescente
+	- não coloca em uma variável, porque ele retorna true ou false
+		$numeros = [4, 2, 8, 6];
+		rsort($numeros);
+
+
+   -    contar quantas vezes um item igual aparece
+		array_count_values()
+
+		$frutas = ['maçã', 'pera', 'maçã', 'maçã'];
+
+		$contador = array_count_values($frutas);
+
+		echo $contador['maçã']; // Exibe: 3
+
+
+   -    remove todos os valores duplicados e deixa apenas o primeiro valor encontrado para cada item repetido
+
+		$unicos = array_unique($numeros);
+
+
+   -    in_array()
+		$frutas = ["maçã", "banana", "laranja"];
+
+		if (in_array("banana", $frutas)) {
+    			echo "O valor está no array!";
+		}
+
+
+   -    array_search()
+		serve para procurar um valor específico dentro de um array e retornar a chave (ou índice)
+
+		$frutas = ["maçã", "banana", "uva"];
+
+		$chave = array_search("laranja", $frutas);
+		echo $chave; // Exibe 2
 
 
 **********************************************
@@ -195,7 +273,6 @@ while
     		echo "The number is: $i <br>";
     		$i++; // Crucial for preventing an infinite loop
 	}
-
 
 
 
